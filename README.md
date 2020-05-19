@@ -32,16 +32,9 @@ $ npm run test
 - Assim que o servidor estiver rodando (depois de ter dado o comando "npm run dev"). Você pode se utilizar do Postman ou Insomnia para testar o endpoint, ou fazer requisicão em alguma outra aplicação.
 - Metodo: GET
 - endpoint: localhost:3000/validate
-- Exemplo de Body: {s
+- Exemplo de Body: {
 	 "password": "AbTp9!foo"
  }
 - Exemplo de Retorno: {
     "result": true
     }
-
-
-
-
-
-
-

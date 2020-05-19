@@ -1,5 +1,5 @@
 class ValidatePassword {
-    
+
     constructor(password) {
         this.password = password
     }

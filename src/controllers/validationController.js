@@ -3,7 +3,6 @@ const ValidatePassword = require('../classes/ValidatePassword');
 
 const router = express.Router();
 
-
 router.get('/validate', async (req, res) => {
     try {
         if (Object.keys(req.body).length === 0) {
