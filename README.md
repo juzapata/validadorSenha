@@ -44,7 +44,7 @@ $ npm run test
 
 Primeiramente tentei seguir os conceitos básicos de Clean Code, como nome de variáveis, tratamento de erros, e fazer um código que se explique por si, sem precisar de muitos comentários. 
 
-A partir disso, eu dividi o projeto em 3 "partes": index, controllers e classes. Para o index ficou reservada a função de agregar todos os arquivos e fazer o servidor rodar. Para o controller, ficou a função de criar o endpoint para a API e receber as informações da requisição, que no caso é, a senha e retornar o resultado. 
+A partir disso, eu dividi o projeto em 3 "partes": index, controllers e classes. Para o index ficou reservada a função de agregar todos os arquivos e fazer o servidor rodar. Para o controller, ficou a função de criar o endpoint para a API, receber as informações da requisição, que no caso é a senha, e retornar a resposta.
 
 Por último, optei por criar somente uma classe, pois acredito que ela tem somente uma função: fazer a validação da senha. Assim a classe ValidatePassword, tem vários métodos, cada um fazendo uma validação única diferente. Assim, acredito que caso existisse novas validações a serem feitas, o trabalho seria de somente adicionar um novo método na classe, e invocá-lo no controller. 
 
