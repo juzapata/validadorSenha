@@ -33,7 +33,7 @@ $ npm run test
 - Metodo: GET
 - endpoint: localhost:3000/validate
 - Exemplo de Body: {
-	 "password": "AbTp9!foo"
+	 "password": "AbTp9!fok"
  }
 - Exemplo de Retorno: {
     "result": true
