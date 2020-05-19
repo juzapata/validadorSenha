@@ -1,9 +1,10 @@
-class Password {
+class ValidatePassword {
+    
     constructor(password) {
         this.password = password
     }
 
-    checkLowCase() {
+    checkLowerCase() {
         if (this.password.match(/[a-z]/)) {
             return true;
         } else { return false }
@@ -33,13 +34,12 @@ class Password {
         } else { return false }
     }
 
-    checkEqual() {
+    checkEqualChars() {
         let noEqual = true;
-        let passwordArray = this.password.split('');
-        for (let i = 1; i < passwordArray.length; i++) {
-            const elOne = passwordArray[i];
-            for (let j = 0; j < passwordArray.length; j++) {
-                const elTwo = passwordArray[j];
+        for (let i = 1; i < this.password.length; i++) {
+            const elOne = this.password[i];
+            for (let j = 0; j < this.password.length; j++) {
+                const elTwo = this.password[j];
                 if (i !== j && elOne === elTwo) {
                     noEqual = false
                 }
@@ -49,7 +49,6 @@ class Password {
             return true
         } else { return false }
     }
-
 }
 
-module.exports = Password;
+module.exports = ValidatePassword;

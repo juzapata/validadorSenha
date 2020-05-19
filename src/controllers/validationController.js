@@ -1,5 +1,5 @@
 const express = require('express');
-const Password = require('../classes/Password');
+const ValidatePassword = require('../classes/ValidatePassword');
 
 const router = express.Router();
 
@@ -9,14 +9,14 @@ router.get('/validate', async (req, res) => {
         if (Object.keys(req.body).length === 0) {
             return res.status(400).send({ erro: 'Você precisa colocar a senha a ser validada no body' });
         }
-        let password = new Password(req.body.password);
+        const validadepassword = new ValidatePassword(req.body.password);
         if (
-            !password.checkLowCase() ||
-            !password.checkUpperCase() ||
-            !password.checkDigit() ||
-            !password.checkSpecialChar() ||
-            !password.checkNineChars() ||
-            !password.checkEqual()
+            !validadepassword.checkNineChars() ||
+            !validadepassword.checkLowerCase() ||
+            !validadepassword.checkUpperCase() ||
+            !validadepassword.checkDigit() ||
+            !validadepassword.checkSpecialChar() ||
+            !validadepassword.checkEqualChars()
         ) {
             return res.status(200).send({ result: false })
         } else {
@@ -24,7 +24,7 @@ router.get('/validate', async (req, res) => {
         }
 
     } catch (error) {
-        console.log('ERRO', error)
+        console.log('ERR', error);
         return res.status(400).send(error);
     }
 });
